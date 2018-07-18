@@ -5,7 +5,7 @@
 
 ## Usage
 In your project build.gradle 
-``
+```
  dependencies {
         classpath 'com.android.tools.build:gradle:3.1.3'
         // add this
@@ -15,7 +15,7 @@ In your project build.gradle
         // in the individual module build.gradle files
     }
    
-``
+```
 
 In your app build.gradle
 
@@ -23,7 +23,11 @@ In your app build.gradle
 apply plugin: 'aspectj4Android'
 ```
 
-That's all. Enjoy your AspectJ coding.
+That's all. Enjoy your AspectJ coding.:smile:
 
 ## Attention
 - Your gradle plugin for Android version >= 3.0
+
+
+## Thanks
+- [JakeWharton's Hugo](https://github.com/JakeWharton/hugo)
