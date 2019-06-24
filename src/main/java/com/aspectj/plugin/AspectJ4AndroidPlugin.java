@@ -10,6 +10,7 @@ import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 import org.gradle.api.logging.Logger;
 import org.gradle.api.tasks.compile.JavaCompile;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.util.List;
@@ -26,11 +27,8 @@ public class AspectJ4AndroidPlugin implements Plugin<Project> {
     private AppExtension mAppExtension;
 
     @Override
-    public void apply(Project p) {
+    public void apply(@NotNull Project p) {
         mLogger = p.getLogger();
-        // todo judge user weather has compiled the 'aspectjrt.jar'
-        // add implementation 'org.aspectj:aspectjrt:1.9.1'
-        p.getDependencies().add("implementation", "org.aspectj:aspectjrt:1.9.1");
 
         mAppExtension = p.getExtensions().getByType(AppExtension.class);
         DomainObjectSet<ApplicationVariant> applicationVariants = mAppExtension

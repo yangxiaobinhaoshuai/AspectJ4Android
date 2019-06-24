@@ -1,15 +1,15 @@
 buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.novoda:bintray-release:0.8.1'
-    }
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.novoda:bintray-release:0.8.1'
+  }
 }
 
 plugins {
-    id 'groovy'
-    id 'maven-publish'
+  id 'groovy'
+  id 'maven-publish'
 }
 apply plugin: 'com.novoda.bintray-release'
 
@@ -19,28 +19,30 @@ version '0.1.4-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
-    google()
-    jcenter()
+  mavenCentral()
+  google()
+  jcenter()
 }
 
 dependencies {
-    compile gradleApi()
-    compile localGroovy()
-    compile 'com.android.tools.build:gradle:3.1.3'
-    compile 'org.aspectj:aspectjtools:1.9.1'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+  compile gradleApi()
+  compile localGroovy()
+  //compile 'com.android.tools.build:gradle:3.1.3'
+//  compile 'com.android.tools.build:gradle:2.3.0'
+  compile 'com.android.tools.build:gradle:3.3.1'
+  compile 'org.aspectj:aspectjtools:1.9.1'
+  testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 // for mavenLocal
 publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId 'com.handsome'
-            artifactId 'aspectJ4Android'
-            from components.java
-        }
+  publications {
+    mavenJava(MavenPublication) {
+      groupId 'com.handsome'
+      artifactId 'aspectJ4Android'
+      from components.java
     }
+  }
 }
 
 apply from: "bintray.gradle"

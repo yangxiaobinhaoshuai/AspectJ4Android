@@ -9,7 +9,7 @@ publish {
     // 项目名称
     artifactId = 'aspectJ4Android'
     // 版本号
-    publishVersion = '0.1.0'
+    publishVersion = '0.1.1'
     // 描述，不重要
     desc = 'A Gradle plugin for AspectJ in Android'
     // 网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
